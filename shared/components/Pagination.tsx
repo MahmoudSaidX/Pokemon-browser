@@ -76,7 +76,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
             disabled={currentPage === 1}
             aria-label="Previous Page"
           >
-            {'<'} Previous
+            {'<'} <span className="hidden md:inline">Previous</span>
           </button>
         </li>
 
@@ -104,7 +104,7 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages }) => {
             disabled={currentPage === totalPages}
             aria-label="Next Page"
           >
-            Next {'>'}
+            <span className="hidden md:inline">Next</span> {'>'}
           </button>
         </li>
       </ul>
